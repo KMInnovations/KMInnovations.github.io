@@ -1,0 +1,37 @@
+<!-- <h2>Chartin' Charts...</h2> -->
+<h5>Let's look at it:</h5>
+
+
+<p>How many people chart?</p>
+<hr class="d-sm-none">
+  <ul class="nav nav-pills flex-column">
+    <li class="nav-item">
+      <a class="topic_a nav-link" href="#" id="topic_1">Insights and decision-making:</a>
+    </li>
+    <li class="nav-item">
+      <a class="topic_a nav-link" href="#" id="topic_2">Competitive advantage:</a>
+    </li>
+    <li class="nav-item">
+      <a class="topic_a nav-link" href="#" id="topic_3">Risk mitigation</a>
+    </li>
+    <li class="nav-item">
+      <a class="topic_a nav-link" href="#" id="topic_4">Cost optimization</a>
+    </li>
+    <li class="nav-item">
+      <a class="topic_a nav-link" href="#" id="topic_5">Customer understanding and personalization</a>
+    </li>
+    <li class="nav-item">
+      <a class="topic_a nav-link" href="#" id="topic_6">Predictive analytics</a>
+    </li>
+  </ul>
+  <script>
+  $(".topic_a").click(function(){
+    var this_id = this.id;
+    console.log('btn:',this_id);
+    $(".main_content").load("assets/views/topics/"+this_id+".html"); 
+    $(".topic_a").each(function(){
+        $(this).removeClass("active"); 
+    });
+    $(this).addClass("active"); 
+  });
+</script>

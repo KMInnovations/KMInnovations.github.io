@@ -1,0 +1,19 @@
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark top_nav">
+    <a class="navbar-brand" href="index.html">KMI Tech</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    </div>  
+  </nav>
+  
+  <script>
+      $(".topnav_link").each(function(){
+          $(this).removeClass("active"); 
+          if(window.location.href.
+          indexOf(window.location.origin +"/kminnovations.github.io/"+ $(this).attr("href")) >= 0){
+            $(this).addClass("active"); 
+          }
+      });
+  </script>

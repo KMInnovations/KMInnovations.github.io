@@ -1,0 +1,63 @@
+<style>
+  
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 56px;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+}
+.a_generic {
+  color: #818181;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav_active {
+  color:yellow;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+<div class="sidenav">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link sidenav_link a_generic" href="index.html" id="homeaa">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link sidenav_link a_generic" href="ethics.html">Ethics</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link sidenav_link a_generic" href="#">Link</a>
+    </li>    
+  </ul>
+</div>
+  <script>
+    $(".sidenav_link").each(function(){
+      console.log("loops!");
+        $(this).removeClass("sidenav_active"); 
+        if(window.location.href.
+        indexOf(window.location.origin +"/kminnovations.github.io/"+ $(this).attr("href")) >= 0){
+          $(this).addClass("sidenav_active"); 
+          $(this).removeClass("a_generic"); 
+          console.log("yup!");
+        }
+    });
+</script>
