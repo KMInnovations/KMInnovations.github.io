@@ -22,8 +22,20 @@
           }
       });
       $(".col-btn").click(function(){
-          $(".sidenav").toggleClass("sidenav_opened sidenav_collapsed"); 
-          // $(".sidenav").toggleClass(""); 
+          $(".sidenav").toggleClass("sidenav_opened sidenav_collapsed");
           $(".main_body").toggleClass("main_body_so main_body_sc"); 
+      });
+      $(document).ready(function(){
+        function myFunction() {
+          console.log(window.innerWidth);
+          if(window.innerWidth < 600 &&
+            $(".sidenav").hasClass("sidenav_opened")==true){
+            $(".col-btn").trigger('click');
+          }else if(window.innerWidth >= 600 &&
+            $(".sidenav").hasClass("sidenav_collapsed")==true){
+            $(".col-btn").trigger('click');
+          }
+        }
+        window.addEventListener("resize", myFunction);
       });
   </script>
