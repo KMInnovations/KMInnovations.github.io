@@ -2,7 +2,6 @@
   
 .sidenav {
   height: 100%;
-  width: 160px;
   position: fixed;
   z-index: 1;
   top: 56px;
@@ -11,6 +10,14 @@
   overflow-x: hidden;
   padding-top: 20px;
   padding-left: 20px;
+}
+.sidenav_opened {
+  height: 100%;
+  width: 160px;
+}
+.sidenav_collapsed {
+  height: 100%;
+  width: 0px;
 }
 
 .sidenav a {
@@ -36,7 +43,8 @@
   .sidenav a {font-size: 18px;}
 }
 </style>
-<div class="sidenav">
+<!-- <div class="sidenav"> -->
+  <div class="sidenav sidenav_opened navbar-collapse" id="collapsibleNavbar">
   <ul class="navbar-nav">
     <li class="nav-item">
         <a class="nav-link sidenav_link a_generic" href="index.html" id="homeaa">Home</a>

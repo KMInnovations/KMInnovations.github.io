@@ -1,11 +1,16 @@
 
+<style>
+  .col-btn{
+    background-color: #343a40;
+    color:lightgray;
+  }
+</style>
+
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark top_nav">
     <a class="navbar-brand" href="index.html">KMI Tech</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    </div>  
+    <button class="col-btn" type="button"  >
+      <em>--menu</em>
+    </button> 
   </nav>
   
   <script>
@@ -15,5 +20,10 @@
           indexOf(window.location.origin +"/kminnovations.github.io/"+ $(this).attr("href")) >= 0){
             $(this).addClass("active"); 
           }
+      });
+      $(".col-btn").click(function(){
+          $(".sidenav").toggleClass("sidenav_opened sidenav_collapsed"); 
+          // $(".sidenav").toggleClass(""); 
+          $(".main_body").toggleClass("main_body_so main_body_sc"); 
       });
   </script>
